@@ -1,0 +1,172 @@
+/* Theme Colors */
+:root {
+    --primary-color: #125086;
+    --secondary-color: #2e5dcc;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --btn-color: #e74c3c;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    
+        
+    
+    
+        
+        background-size: cover;
+        background-position: center;
+        background-image: url('../images/a-photo-of-a-mix-of-humans-and-lions-in-a-classroo-wwn0wXDzT9mCzdN7nL4CaA-_4JMcnp0Rq6XMmpBVrvMBw.jpeg');
+        
+    
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Flexbox for the Navigation */
+  header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    color: var(--secondary-color);
+  }
+  .slider {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: 0.6s;
+    animation: slideAnimation 20s infinite;
+  }
+  
+  .slides input {
+    display: none;
+  }
+  
+  .slide {
+    width: 100vw;
+
+    transition: 0.6s;
+  }
+  
+  .slide img {
+   
+    
+  }
+  
+  .navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn {
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 0 10px;
+  }
+  
+  .manual-btn:hover {
+    background: #ffffff;
+  }
+  
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first {
+    margin-left: -100%;
+  }
+  
+  #radio3:checked ~ .first {
+    margin-left: -200%;
+  }
+  
+  #radio4:checked ~ .first {
+    margin-left: -300%;
+  }
+  
+  .navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 370px;
+  }
+  
+  .navigation-auto div {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: background 0.3s;
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    45% {
+        margin-left: -100%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    75% {
+        margin-left: -300%;
+    }
+    95% {
+        margin-left: -300%;
+    }
+    100% {
+        margin-left: 0;
+    }
+  }
