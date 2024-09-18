@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .slider {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    aspect-ratio: 16/9; /* Makes it responsive */
+  }
+  
+  .slides {
+    width: 200%; /* Only 2 slides, so 200% */
+    height: 100%;
+    display: flex;
+    transition: 1s ease;
+  }
+  
+  .slides input {
+    display: none;
+  }
+  
+  .slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Manual Navigation */
+  .navigation-manual {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .manual-btn {
+    border: 2px solid #ffffff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .manual-btn:hover {
+    background: #ffffff;
+  }
+  
+  /* Slide positions based on which radio button is checked */
+  #radio1:checked ~ .first {
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first {
+    margin-left: -100%;
+  }
+  
+  /* Responsive design: make sure it adapts to screen size */
+  @media screen and (max-width: 768px) {
+    .slider {
+      max-width: 100%;
+    }
+  
+    .manual-btn {
+      padding: 4px;
+    }
+  }
+  

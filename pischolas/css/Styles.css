@@ -1,0 +1,380 @@
+/* Theme Colors */
+:root {
+  --primary-color: #125086;
+  --secondary-color: #5a80d9;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --btn-color: #e74c3c;
+}
+.banner {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  background-image: url(../images/bg1.png);
+  justify-content: center;
+  
+}
+.animationBanner{
+  color: #ffffff;
+  width: 1100px; 
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  position: relative;
+  
+ 
+}
+#just {
+  
+  animation: customAni 2s ease 0s 1 normal none;
+  color: #fff;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 12ch;
+  
+
+}
+
+@keyframes customAni {
+0% {
+transform: scale(0.5);
+transform-origin: 50% 0%;
+}
+
+100% {
+transform: scale(1);
+transform-origin: 50% 0%;
+}
+}
+
+
+
+
+
+
+button {
+  width: 370px;
+  padding: 12px;
+  background-color: chocolate;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #0077ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#CardImg {
+  width: 100%;
+
+}
+#cardimgb{
+  opacity: none;
+
+  background-size: cover;
+  background-image: url('../images/a-photo-of-a-human-lion-hybrid-with-a-graduation-c-6uYkI5QqQ0CukjHoA40WYA-lag32ECqSIqrA637TDEKbQ.jpeg');
+}
+
+body {
+      background-size: cover;
+      background-position: center;
+      background-image: url('../images/bg.jpg');
+      /* background-image: url('../images/a-photo-of-a-mix-of-humans-and-lions-in-a-classroo-wwn0wXDzT9mCzdN7nL4CaA-_4JMcnp0Rq6XMmpBVrvMBw.jpeg'); */
+
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  
+}
+
+/* Flexbox for the Navigation */
+header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+  padding-left: 30px;
+  
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  margin-left: 10px;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+.slider {
+  width: 25%;
+  height: 20%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  position: center;
+  position: relative;
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  transition: 0.6s;
+  animation: slideAnimation 5s infinite;
+  position: relative;
+  left: 20%;
+
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 100vw;
+
+  transition: 0.6s;
+}
+
+.slide img {
+ 
+  width: 100vh;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0 10px;
+}
+
+.manual-btn:hover {
+  background: #ffffff;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -100%;
+}
+
+
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 370px;
+}
+
+.navigation-auto div {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: background 0.3s;
+}
+.card-container {
+  display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 500px;
+  perspective: 1000px; /* perspective defines how far the 3D element is from the viewer */
+  display: flex;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side when facing front */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg); /* Rotate the back card */
+}
+
+h3, p {
+  margin: 0;
+  font-size: 12px;
+  
+}
+pre{
+  font-size: 15px;
+}
+/* Footer CSS */
+.footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+.footer p {
+margin: 0;
+font-size: 1.2em;
+}
+
+.social-icons {
+margin-top: 10px;
+}
+
+.social-icon {
+text-decoration: none;
+color: white;
+font-size: 2em;
+margin: 0 10px;
+display: inline-block;
+width: 40px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+border-radius: 50%;
+transition: background-color 0.3s;
+}
+
+/* Styling for individual social icons */
+.social-icon.facebook {
+background-color: #3b5998;
+}
+
+.social-icon.twitter {
+background-color: #00acee;
+}
+
+.social-icon.instagram {
+background-color: #E1306C;
+}
+
+/* Hover effects for social icons */
+.social-icon:hover {
+background-color: #555;
+}
+@keyframes slideAnimation {
+  0% {
+      margin-left: 0;
+  }
+  20% {
+      margin-left: 0;
+  }
+  25% {
+      margin-left: -100%;
+  }
+  45% {
+      margin-left: -100%;
+  }
+  50% {
+      margin-left: -200%;
+  }
+  70% {
+      margin-left: -200%;
+  }
+  75% {
+      margin-left: -300%;
+  }
+  95% {
+      margin-left: -300%;
+  }
+  100% {
+      margin-left: 0;
+  }
+}
+/* Media Query: Hide the card on smaller screens */
+@media (max-width: 600px) {
+.flip-card {
+    display: none;
+}
+.aboutSection {
+  width: 1000px;
+  padding: auto;
+  
+  
+}
+.welcome{
+  width: 500px;
+  height: 500px;
+
+}
+.why {
+
+
+}
+
+
+
+
+
+
+
+
+.footer{
+  display: none;
+}
+}
